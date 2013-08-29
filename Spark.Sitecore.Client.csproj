@@ -30,9 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Lucene.Net">
-      <HintPath>..\_Binaries\Sitecore\Lucene.Net.dll</HintPath>
-    </Reference>
     <Reference Include="Sitecore.Client">
       <HintPath>..\_Binaries\Sitecore\Sitecore.Client.dll</HintPath>
     </Reference>
@@ -65,17 +62,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Spark.Html\Spark.Html.csproj">
+    <ProjectReference Include="..\Spark.Html\Spark.Html.csproj">
       <Project>{c3e6a31f-081f-48b0-8b9e-9d8488938eb7}</Project>
       <Name>Spark.Html</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Spark.Web\Spark.Web.csproj">
-      <Project>{dffbd8bc-3f2e-487b-80a1-18553bee4e08}</Project>
-      <Name>Spark.Web</Name>
     </ProjectReference>
     <ProjectReference Include="..\Spark.Sitecore\Spark.Sitecore.csproj">
       <Project>{d6a1591a-d26d-4afa-aa14-13659986ee07}</Project>
       <Name>Spark.Sitecore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Spark.Web\Spark.Web.csproj">
+      <Project>{dffbd8bc-3f2e-487b-80a1-18553bee4e08}</Project>
+      <Name>Spark.Web</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
