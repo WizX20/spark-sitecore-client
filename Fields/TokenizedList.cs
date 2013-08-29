@@ -4,7 +4,6 @@
 	using System.Collections.Generic;
 	using System.Diagnostics.CodeAnalysis;
 	using System.Web.UI;
-
 	using global::Sitecore;
 	using global::Sitecore.Data.Items;
 	using global::Sitecore.Diagnostics;
@@ -15,10 +14,8 @@
 	using global::Sitecore.Text;
 	using global::Sitecore.Web;
 	using global::Sitecore.Web.UI.HtmlControls.Data;
-
-	using Spark.Sitecore.Data.Items;
-	using Spark.Utilities;
-	using Spark.Web.UI;
+	using Spark.Html;
+	using Spark.Web;
 
 	/// <summary>
 	/// Defines the TokenizedListField class.  This custom Sitecore Field Type is based off of the jquery-tokeninput project located here: https://github.com/loopj/jquery-tokeninput
@@ -125,10 +122,21 @@
 			}
 		}
 
+		/// <summary>
+		/// The render manual options.
+		/// </summary>
+		/// <param name="output">
+		/// The output.
+		/// </param>
+		/// <param name="source">
+		/// The source.
+		/// </param>
+		/// <param name="controlId">
+		/// The control id.
+		/// </param>
 		protected void RenderManualOptions(HtmlTextWriter output, string source, string controlId)
 		{
 			// TODO: Ed, this appears to be very CW centric, can we make it more generalized in name?
-
 			var current = Client.GetItemNotNull(this.ItemID, global::Sitecore.Context.ContentDatabase);
 
 			var items = this.GetItems(current, this.Source);
@@ -155,10 +163,21 @@
 			}
 		}
 
+		/// <summary>
+		/// The render service options.
+		/// </summary>
+		/// <param name="output">
+		/// The output.
+		/// </param>
+		/// <param name="source">
+		/// The source.
+		/// </param>
+		/// <param name="controlId">
+		/// The control id.
+		/// </param>
 		protected void RenderServiceOptions(HtmlTextWriter output, string source, string controlId)
 		{
 			// TODO: Ed, this appears to be very CW centric, can we make it more generalized in name?
-
 			var current = Client.GetItemNotNull(this.ItemID, global::Sitecore.Context.ContentDatabase);
 			var siteItem = current.Axes.SelectSingleItem("ancestor-or-self::*[contains(@@templatename, 'Site')]");
 
