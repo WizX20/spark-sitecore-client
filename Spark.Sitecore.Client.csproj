@@ -31,10 +31,21 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Sitecore.Client">
-      <HintPath>..\_Binaries\Sitecore\Sitecore.Client.dll</HintPath>
+      <HintPath>..\Diamond\_Binaries\Sitecore\Sitecore.Client.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Sitecore.Kernel">
-      <HintPath>..\_Binaries\Sitecore\Sitecore.Kernel.dll</HintPath>
+      <HintPath>..\Diamond\_Binaries\Sitecore\Sitecore.Kernel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Spark.Html">
+      <HintPath>packages\Spark.Html.1.0.5141.21250\lib\net45\Spark.Html.dll</HintPath>
+    </Reference>
+    <Reference Include="Spark.Sitecore">
+      <HintPath>packages\Spark.Sitecore.1.0.5141.22776\lib\net45\Spark.Sitecore.dll</HintPath>
+    </Reference>
+    <Reference Include="Spark.Web">
+      <HintPath>packages\Spark.Web.1.0.5141.28331\lib\net45\Spark.Web.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -62,27 +73,19 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Spark.Html\Spark.Html.csproj">
-      <Project>{c3e6a31f-081f-48b0-8b9e-9d8488938eb7}</Project>
-      <Name>Spark.Html</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Spark.Sitecore\Spark.Sitecore.csproj">
-      <Project>{d6a1591a-d26d-4afa-aa14-13659986ee07}</Project>
-      <Name>Spark.Sitecore</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Spark.Web\Spark.Web.csproj">
-      <Project>{dffbd8bc-3f2e-487b-80a1-18553bee4e08}</Project>
-      <Name>Spark.Web</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="Spark.Sitecore.Client.License.txt" />
     <Content Include="Fields\File System Prerequisites\sitecore modules\Shell\Spark\Fields\jquery.tokenizedlist.js" />
     <Content Include="Fields\File System Prerequisites\sitecore modules\Shell\Spark\Fields\tokenizedlist-facebook.css" />
     <Content Include="Fields\File System Prerequisites\sitecore modules\Shell\Spark\Fields\tokenizedlist.css" />
     <Content Include="Fields\_README.txt" />
+    <Content Include="Spark.Html.License.txt" />
+    <Content Include="Spark.Sitecore.License.txt" />
+    <Content Include="Spark.Web.License.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Spark.Sitecore.Client.nuspec" />
     <None Include="Fields\File System Prerequisites\Spark_FieldTypes.config.disabled" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
