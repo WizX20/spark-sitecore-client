@@ -74,7 +74,9 @@
 					string path = ExtractPath(value);
 					string parameters = ExtractParameters(value);
 
-					Item sourceTarget = this.GetItem().Axes.GetItem(path);
+					// FIX
+                    			// old: Item sourceTarget = this.GetItem().Axes.GetItem(path);
+            				Item sourceTarget = Sitecore.Context.ContentDatabase.Items[ItemID].Axes.SelectSingleItem(path);
 
 					if (sourceTarget != null)
 					{
